@@ -18,6 +18,7 @@
         "react"        
     ],
     "rules": {
-        "consistent-return": "off"
+        "consistent-return": "off",
+        "no-console": "off"
     }
 }
