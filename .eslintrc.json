@@ -15,8 +15,9 @@
         "ecmaVersion": "latest"
     },
     "plugins": [
-        "react"
+        "react"        
     ],
     "rules": {
+        "consistent-return": "off"
     }
 }

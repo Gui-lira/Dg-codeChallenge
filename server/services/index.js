@@ -1,7 +1,7 @@
-const { get } = require('../models');
+const getByName = require('./getByName');
 const getAll = require('./getAll');
 
 module.exports = {
-  get,
+  getByName,
   getAll,
 };
