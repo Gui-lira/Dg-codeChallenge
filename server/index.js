@@ -1,6 +1,6 @@
 const PORT = 4000;
 const app = require('./app');
 
-app.use(PORT, () => {
-  console.log('Olá');
+app.listen(PORT, () => {
+  console.log('olá');
 });

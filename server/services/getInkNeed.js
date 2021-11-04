@@ -1,8 +1,10 @@
-const { getByName } = require('.');
+const getByName = require('./getByName');
 
 const getInkNeed = async (area) => {
-  const { ink: utility, recipients } = await getByName('Measures', 'ink');
+  const { ink } = await getByName('Measures', 'ink');
+  const { utility, recipients } = ink;
   let litersNeed = area / utility;
+  console.log(litersNeed);
   const inkQuantity = {};
   recipients.forEach((recipient) => {
     inkQuantity[recipient] = 0;
@@ -12,6 +14,7 @@ const getInkNeed = async (area) => {
       if (litersNeed - recipients[index] > -1) {
         inkQuantity[recipients[index]] += 1;
         litersNeed -= recipients[index];
+        break;
       }
     }
   }

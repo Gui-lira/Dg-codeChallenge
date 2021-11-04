@@ -1,13 +1,13 @@
-const { getAll } = require('.');
+const getAll = require('./getAll');
 
-const calculateArea = async (wall) => {
+const calculateArea = async (heigth, width, doors, windows) => {
   const measures = await getAll('Measures');
   const { window } = measures.find((measure) => Object.keys(measure).includes('window'));
   const { door } = measures.find((measure) => Object.keys(measure).includes('door'));
-  const doorArea = door.heigth * door.width;
-  const windowArea = window.heigth * window.width;
-  const wallArea = wall.heigth * wall.width;
-  const notWall = (wall.doors * doorArea) + (wall.windows * windowArea);
+  const doorArea = Number(door.heigth) * Number(door.width) * Number(doors);
+  const windowArea = Number(window.heigth) * Number(window.width) * Number(windows);
+  const wallArea = Number(heigth) * Number(width);
+  const notWall = (doorArea) + (windowArea);
   const usableArea = wallArea - notWall;
   return { usableArea, wallArea };
 };
