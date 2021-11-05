@@ -1,0 +1,20 @@
+[
+    {"window": {
+        "heigth": 200,
+        "width": 120
+    }},
+    {"door": {
+        "heigth": 190,
+        "width": 80
+    }},
+    {"ink": {
+        "utility": 5000,
+        "recipients": [0.5, 2.5, 3.6, 18]
+    }},
+    {
+        "wall": {
+            "max": 150000,
+            "min": 1000
+        }
+    }
+]
