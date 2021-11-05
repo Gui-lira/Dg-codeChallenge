@@ -1,25 +1,22 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
-        "es2021": true,
-        "mocha": true
+        "es2021": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "airbnb"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": "latest"
+        "ecmaVersion": 12,
+        "sourceType": "module"
     },
     "plugins": [
-        "react"        
+        "react"
     ],
     "rules": {
-        "consistent-return": "off",
-        "no-console": "off"
     }
 }

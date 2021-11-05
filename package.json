@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/**/*$NAME*.test.js --exit",
+    "test": "mocha server/tests/integration.test.js",
     "test:coverage": "nyc --include='src/**/*.js' npm run test",
-    "populate": "mongoimport --db DgRepublic --collection Measures --drop --file ./measures.bson --jsonArray"
+    "populate": "mongoimport --db DgRepublic --collection Measures --drop --file ./measures.json --jsonArray"
   },
   "repository": {
     "type": "git",
