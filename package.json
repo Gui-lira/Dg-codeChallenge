@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "test": "mocha server/tests/integration.test.js",
     "test:coverage": "nyc --include='src/**/*.js' npm run test",
     "populate": "mongoimport --db DgRepublic --collection Measures --drop --file ./measures.json --jsonArray"

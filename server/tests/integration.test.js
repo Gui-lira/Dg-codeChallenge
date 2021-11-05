@@ -19,7 +19,7 @@ const wrongWallArea = {
   height: 500, width: 500, doors: 0, window: 0,
 };
 
-const apiUrl = '/inkNeeded';
+const apiUrl = '/ink';
 
 const wrongEntries = {};
 

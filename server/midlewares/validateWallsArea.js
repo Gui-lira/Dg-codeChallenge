@@ -3,10 +3,8 @@ const { getByName, calculateArea } = require('../services');
 const validateWallArea = async (req, res, next) => {
   const { walls } = req.body;
   const { wall } = await getByName('Measures', 'wall');
-  console.log(wall);
   let validation = true;
   await Promise.all(walls.map(async (element) => {
-    console.log(element);
     const {
       usableArea,
       wallArea,

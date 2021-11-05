@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function RenderInk(ink) {
+export default function RenderInk({ ink }) {
     const maped = Object.keys(ink).map((key) => {
+        console.log(Object.keys(ink))
         if (ink[key] !== 0) return (
             <div>
                 <p>{`Você vai precisar de ${ink[key]} toneis de ${key} litros`}</p>

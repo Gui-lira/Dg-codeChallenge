@@ -6,7 +6,6 @@ const returnNeed = async (req, res) => {
     element.height, element.width, element.doors, element.window,
   )));
   const totalArea = previusArr.reduce((acumulator, wall) => acumulator + wall.usableArea, 0);
-  console.log(totalArea);
   const inkNeeded = await getInkNeed(totalArea);
   return res.status(200).json(inkNeeded);
 };

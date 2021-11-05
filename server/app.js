@@ -6,6 +6,6 @@ const { validateDoors, validateWallArea, validateWallsParameters } = require('./
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/inkNeeded', validateWallsParameters, validateDoors, validateWallArea, returnNeed);
+app.post('/ink', validateWallsParameters, validateDoors, validateWallArea, returnNeed);
 
 module.exports = app;
